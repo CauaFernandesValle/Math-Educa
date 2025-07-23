@@ -1,24 +1,33 @@
-Projeto para nota da AV2 - 2CAW Manhã- 2025/1
+Projeto Math Educa
 
-Orientações:
-- Esse trabalho não está relacionado com o que está sendo desenvolvido para Atividade Extensionista.
-- Esse projeto vale 10,0 pontos e será a nota da AV2.
-- Caso o trabalho não seja postado dentro do prazo, o aluno receberá 0,0 como nota sem direito a 2a chamada;
-- O site deverá ser desenvolvido individualmente. Assunto a ser desenvolvido é livre;
-- Caso já tenha cursado anteriormente a disciplina, é preciso definir um novo tema;
-- Ele deve ser composto por, no mínimo, 2 páginas html com a implementação das navegações entre as páginas, ou seja, de qualquer página posso navegar para qualquer outra. Como exemplo: index.html, servicos.html ou contato.html;
-- O tema e layout a ser aplicado na construção do site deve ser apresentado à professora (PRESENCIALMENTE) e aprovado por ela até dia 03/06;
--  Obrigatória implementação de estruturas de pasta completas (nomenclatura, subpastas de arquivos etc.) além de uso de padrões HTML5 com a devida indentação do código. Todas as páginas devem, obrigatoriamente, conter cabeçalho e rodapé;
-- Também é obrigatório:
-   (1) uso de estilização e formatação por CSS inline, interno e/ou externo (não é permitido uso do arquivo externo css escrito pela W3School ou qualquer outra fonte. Pode criar CSS externo próprio); 
-   (2) duas interação com usuário em Javascript (NÃO aceito alert); 
-   (3) implementação tabela;
-   (4) implementação de uma barra lateral (que vá do cabeçalho até o rodapé) à esquerda ou direita (tipo as propagandas que aparecem das pesquisas usando Google – conteúdo da barra depende do projeto). Pode estar presente em apenas uma das páginas;
-  (5) uso de imagens;
-  (6) uso de vídeo ou áudio.
-- Opcional:
-  (6) Layout Responsivo; e
-  (7) uso de CANVAS / SVG.
-- É PROIBIDO uso de arquivos externos do W3C (CSS e Javascript). Pode-se usar arquivo externo CSS ou JS se for escrito pelo aluno, caso seja identificado necessidade dele;
-- Prazo máximo de postagem (arquivo zipado no Google Classroom – obrigatório nome do aluno no nome do arquivo): 17/06/2025 às 18:00h (sem prorrogação).
-ATENÇÃO: Não será permitido uso de geradores de código, templates e frameworks de qualquer tipo. A constatação do uso desses implicará em conceito Zero (0,0) no projeto.
+Projeto desenvolvido para a avaliação da disciplina Construção de Aplicações Web
+
+Este projeto é um site educacional interativo criado para auxiliar no aprendizado das quatro operações matemáticas fundamentais: adição, subtração, multiplicação e divisão.
+
+Acesse o site aqui
+https://cauafernandesvalle.github.io/Math-Educa/
+
+
+Funcionalidades Implementadas
+
+O site foi construído do zero, seguindo as boas práticas de desenvolvimento web e atendendo aos seguintes requisitos:
+
+Estrutura Profissional: Organização completa em pastas para `CSS`, `JS`, `Imagens` e `Páginas`.
+Navegação Completa: Duas páginas HTML (`Home` e `Multiplicação`) com navegação interligada por um cabeçalho consistente.
+Estilização Customizada: Estilos criados com CSS puro em arquivos externos, sem uso de frameworks.
+Tabela Informativa: Uma tabela de multiplicação (tabuada) para consulta rápida.
+Interatividade com JavaScript:
+    1.  Gerador de Problemas: Uma ferramenta que cria problemas de multiplicação aleatórios e revela a resposta com um clique.
+    2.  Lousa Digital: Uma barra lateral com um `<canvas>` que funciona como uma lousa para o usuário fazer rascunhos, com funções de lápis e borracha.
+Uso de Mídia:
+    Imagens para logo, exemplos visuais e ícones de interação.
+    Um vídeo tutorial incorporado na página.
+
+
+Tecnologias Utilizadas
+
+Este projeto foi construído utilizando apenas as tecnologias base da web, sem frameworks ou bibliotecas externas.
+
+HTML5
+CSS3
+JavaScript
