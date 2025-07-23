@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Math Educa</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+	<link rel="icon" type="image/png" href="../Imagens/Logo.png">
+</head>
+<body>
+
+    <header>
+        <a href="../Math_educa.html">
+            <img src="../Imagens/Logo.png" alt="logo Math Educa" class="logo-img cabeca">
+        </a>
+        <p class="cabeca-desativado">ADIÇÃO</p>
+
+		<p class="cabeca-desativado">SUBTRAÇÃO</p>
+
+		<a href="Multiplicação.html">
+            <p class="cabeca">MULTIPLICAÇÃO</p>
+        </a>
+
+		<p class="cabeca-desativado">DIVISÃO</p>
+    </header>
+
+    <div class="conteudo">
+        <main class="conteudo-principal">
+            <h1 class="titulo-principal">Multiplicação</h1>
+
+            <h2>Passo 1: Arme a conta</h2>
+            <p>Escreva os números um abaixo do outro, alinhando-os pela direita. Não importa qual número fica em cima, mas geralmente se coloca o maior.</p>
+            <img src="../Imagens/multi1.png" alt="exemplo passo 1: multiplicação" class="imagem-exemplo">
+
+            <h2>Passo 2: Multiplique pelo primeiro algarismo da direita (unidade)</h2>
+            <p>Pegue o algarismo mais à direita do número de baixo (no exemplo, o 7) e multiplique-o por cada algarismo do número de cima, sempre da direita para a esquerda. É aqui que usamos o "sobe um": quando o resultado em uma coluna é 10 ou maior, o algarismo da direita fica e o da esquerda "sobe" para ser somado ao resultado da próxima coluna.</p>
+            <img src="../Imagens/multi2.png" alt="exemplo passo 2: multiplicação" class="imagem-exemplo">
+
+            <h2>Passo 3: Multiplique pelos próximos algarismos (da direita para a esquerda)</h2>
+            <p>Agora, repita o processo com o próximo algarismo do número de baixo (o 1). Regra importante: Antes de começar a multiplicar, adicione um zero à direita do resultado. Para cada novo algarismo que você usar, adicione um zero a mais. Como este é o segundo algarismo, adicionamos um zero.</p>
+            <img src="../Imagens/multi3.png" alt="exemplo passo 3: multiplicação" class="imagem-exemplo">
+
+            <h2>Passo 4: Some todos os resultados parciais</h2>
+            <p>A etapa final é somar todos os resultados que você calculou, alinhando-os corretamente.</p>
+            <img src="../Imagens/multi4.png" alt="exemplo passo 4: multiplicação" class="imagem-exemplo">
+
+            <h2 class="titulo-centro">TABUADA DE 1 A 9</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>x</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="td-highlight">1</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+                    <tr><td class="td-highlight">2</td><td>2</td><td>4</td><td>6</td><td>8</td><td>10</td><td>12</td><td>14</td><td>16</td><td>18</td></tr>
+                    <tr><td class="td-highlight">3</td><td>3</td><td>6</td><td>9</td><td>12</td><td>15</td><td>18</td><td>21</td><td>24</td><td>27</td></tr>
+                    <tr><td class="td-highlight">4</td><td>4</td><td>8</td><td>12</td><td>16</td><td>20</td><td>24</td><td>28</td><td>32</td><td>36</td></tr>
+                    <tr><td class="td-highlight">5</td><td>5</td><td>10</td><td>15</td><td>20</td><td>25</td><td>30</td><td>35</td><td>40</td><td>45</td></tr>
+                    <tr><td class="td-highlight">6</td><td>6</td><td>12</td><td>18</td><td>24</td><td>30</td><td>36</td><td>42</td><td>48</td><td>54</td></tr>
+                    <tr><td class="td-highlight">7</td><td>7</td><td>14</td><td>21</td><td>28</td><td>35</td><td>42</td><td>49</td><td>56</td><td>63</td></tr>
+                    <tr><td class="td-highlight">8</td><td>8</td><td>16</td><td>24</td><td>32</td><td>40</td><td>48</td><td>56</td><td>64</td><td>72</td></tr>
+                    <tr><td class="td-highlight">9</td><td>9</td><td>18</td><td>27</td><td>36</td><td>45</td><td>54</td><td>63</td><td>72</td><td>81</td></tr>
+                </tbody>
+            </table>
+
+            <h2 class="titulo-centro">GERADOR DE PROBLEMA:</h2>
+            <div class="gerador-problema">
+                <p id="num1"></p>
+                <p> x </p>
+                <p id="num2"></p>
+                <p> = </p>
+                <p id="resp"></p>
+                <button id="gerar" class="botao-problema">Gerar problema</button>
+            </div>
+            <br><br>
+            <h2 class="titulo-centro">TUTORIAL DAS FERRAMENTAS MATH EDUCA</h2>
+            <video src="../Videos/tutorial.mp4" controls width="640" class="tutorial-video">
+                Vídeo não carregado.
+            </video>
+        </main>
+
+        <aside class="barra-lateral">
+            <canvas id="lousaDigital"></canvas>
+            <div class="botoes-ferramentas">
+                <img id="lapisSCR" src="../Imagens/Lapis_bottom.png" alt="Ativar Lápis">
+                <img id="borrachaSCR" src="../Imagens/Borracha_bottom.png" alt="Ativar Borracha">
+                <img id="resetSCR" src="../Imagens/Reset_bottom.png" alt="Resetar Tela">
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <a href="../Math_educa.html">
+            <img src="../Imagens/Logo.png" alt="logo Math Educa" class="logo-img">
+        </a>
+        <p class="footer-text">© 2025 Math Educa. Todos os direitos reservados.</p>
+    </footer>
+
+	<script src="../JS/scripts.js" defer></script>
+</body>
+</html>

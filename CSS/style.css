@@ -1,0 +1,197 @@
+* {
+    font-family: "arial", sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+header, footer {
+    background-color: #031d3e;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    padding: 18px;
+}
+
+video {
+    border: 5px solid #031d3e;
+}
+
+.logo-img {
+    width: 75px;
+    height: 75px;
+}
+
+.cabeca {
+    color: white;
+    margin: 40px 55px;
+    font-size: 1.8rem;
+}
+
+.cabeca-desativado {
+    color: grey;
+    margin: 40px 55px;
+    font-size: 1.8rem;
+}
+
+.footer-text {
+    font-size: 15px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.texto-introducao {
+    margin: 130px 70px 50px 70px;
+}
+
+.lista-operacoes {
+    margin-left: 55px;
+    margin-bottom: 80px;
+}
+
+.container-flex {
+    display: flex;
+}
+
+.coluna {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    margin-left: 60px;
+}
+
+.coluna-direita {
+    margin-right: 50px;
+}
+
+.conteudo {
+    display: flex;
+    flex: 1;
+}
+
+.conteudo-principal {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    margin-bottom: 100px;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.titulo-centro {
+    text-align: center;
+}
+
+.imagem-exemplo {
+    width: 200px;
+    height: 200px;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
+.tutorial-video {
+    display: block;
+    margin: 40px auto;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0 auto 150px auto;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+thead th {
+    background-color: lightgray;
+    color: black;
+}
+
+.td-highlight {
+    background-color: lightgray;
+}
+
+.barra-lateral {
+    flex-basis: 500px;
+    flex-shrink: 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-left: 3px solid #ddd;
+    position: relative;
+}
+
+.botoes-ferramentas {
+    position: fixed;
+    top: 200px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.botoes-ferramentas img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.botoes-ferramentas img.ativo {
+    filter: brightness(0.9);
+    border: 2px solid #031d3e;
+    border-radius: 5px;
+}
+
+.gerador-problema {
+    margin-left: 40px;
+}
+
+.gerador-problema p {
+    display: inline-block;
+}
+
+.resposta-escondida {
+    background-color: black;
+    color: black;
+    cursor: pointer;
+    user-select: none;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+.botao-problema {
+    margin-left: 20px;
+    margin-top: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.botao-problema:hover {
+    background-color: #e0e0e0;
+}
