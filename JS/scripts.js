@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (canvas) {
         const ctx = canvas.getContext('2d');
         canvas.width = 500;
-        canvas.height = 3350;
+        canvas.height = 3950;
         ctx.fillStyle = 'white';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -79,18 +79,56 @@ document.addEventListener('DOMContentLoaded', () => {
         canvas.addEventListener('mouseleave', pararDesenho);
     }
 
-    const numero1 = document.getElementById('num1');
+     const numero1 = document.getElementById('num1');
     const numero2 = document.getElementById('num2');
     const resultado = document.getElementById('resp');
     const botaoGerar = document.getElementById('gerar');
 
     if (botaoGerar) {
         function gerarNovoProblema() {
-            let valor1 = Math.floor(Math.random() * 68) + 32;
-            let valor2 = Math.floor(Math.random() * 68) + 32;
-            numero1.textContent = valor1;
-            numero2.textContent = valor2;
-            resultado.textContent = valor1 * valor2;
+            
+            let valor1, valor2, divisao;
+
+            // --- ESTRATÉGIA: GERAR ATÉ ENCONTRAR UM PAR VÁLIDO ---
+            while (true) {
+                // 1. Gerar o Dividendo (valor1) (ex: 10.0 a 50.0)
+                let v1Inteiro = Math.floor(Math.random() * 401) + 100; 
+                valor1 = v1Inteiro / 10.0;
+
+                // 2. Gerar o Divisor (valor2) (ex: 2.0 a 9.9)
+                let v2Inteiro = Math.floor(Math.random() * 80) + 20;
+                valor2 = v2Inteiro / 10.0;
+
+                // 3. Calcular a Divisão
+                divisao = valor1 / valor2;
+
+                // 4. VERIFICAR: O resultado tem 3 casas ou menos?
+                
+                // Corrigir mini-erros de ponto flutuante (ex: 1.0000000001)
+                let divisaoCorrigida = parseFloat(divisao.toFixed(8));
+                let divisaoStr = divisaoCorrigida.toString();
+                
+                const casasDecimais = divisaoStr.split('.')[1]?.length || 0;
+
+                // Se for um resultado "limpo" (<= 3 casas), saia do loop
+                if (casasDecimais <= 3) {
+                    break;
+                }
+                
+                // Se não, o 'while(true)' força a repetição
+            }
+            
+            // --- Exibir os números ---
+            
+            // Usamos .toFixed(1) apenas para formatar (ex: 50.0)
+            numero1.textContent = valor1.toFixed(1).replace('.', ',');
+            
+            numero2.textContent = valor2.toFixed(1).replace('.', ',');
+            
+            // O 'divisao' já é o resultado exato e correto.
+            // Apenas o convertemos para string.
+            resultado.textContent = divisao.toString().replace('.', ',');
+            
             resultado.className = 'resposta-escondida';
         }
 

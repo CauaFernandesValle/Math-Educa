@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Math Educa</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+	<link rel="icon" type="image/png" href="../Imagens/Logo.png">
+</head>
+<body>
+
+    <header>
+        <a href="../index.html">
+            <img src="../Imagens/Logo.png" alt="logo Math Educa" class="logo-img cabeca">
+        </a>
+        <p class="cabeca-desativado">ADIÇÃO</p>
+
+		<p class="cabeca-desativado">SUBTRAÇÃO</p>
+
+		<a href="multiplicacao.html">
+            <p class="cabeca">MULTIPLICAÇÃO</p>
+        </a>
+
+		<p class="cabeca-desativado">DIVISÃO</p>
+    </header>
+
+    <div class="conteudo">
+        <main class="conteudo-principal">
+            <h1 class="titulo-principal">Divisão</h1>
+
+            <h2>Passo 1: Armar a Conta e Igualar as Vírgulas</h2>
+            <br>
+            <p>Armar: Escreva o primeiro numero e, ao lado, desenhe a "chave" ( L ) com o segundo numero dentro.</p>
+
+            <ul class="lista-operacoes">
+            <li>Regra da Vírgula: Você não pode ter vírgula no segundo numero. Para resolver isso, iguale as casas decimais:</li>
+            <li>Conte quantas casas existem depois da vírgula no segundo numero.</li>
+            <li>Mova a vírgula do segundo numero para a direita até que ele vire um número inteiro.</li>
+            <li>Agora, mova a vírgula do primeiro numero para a direita o mesmo número de casas.</li>
+            <li>Se faltarem números no primeiro numero, complete com zeros.</li>
+            </ul>
+            <img src="../Imagens/divi1.png" alt="exemplo passo 1: divisão" class="imagem-exemplo">
+
+            <h2>Passo 2: Começar a Divisão (Da Esquerda para a Direita)</h2>
+            <ul class="lista-operacoes">
+            <li>Olhe para o segundo numero (ex: 125).</li>
+            <li>Pegue o menor "pedaço" do primeiro numero, começando da esquerda, que seja maior ou igual ao segundo numero.
+            <br>Exemplo: Em 144 / 12. Você não pega o 1 (é menor que 12). Você pega o 14.</li>
+            <li>Pergunte-se: "Quantas vezes o segundo numero cabe nesse pedaço ?"</li>
+            <li>Escreva a quantidade de vezes que ele cabe no espaço da resposta.</li>
+            </ul>
+            <img src="../Imagens/divi2.png" alt="exemplo passo 2: divisão" class="imagem-exemplo">
+
+            <h2>Passo 3: O Ciclo Principal (Multiplicar, Subtrair, Descer)</h2>
+            <p>Este é o processo que você vai repetir várias vezes.</p>
+            <ul class="lista-operacoes">
+            <li>1) Multiplicar: Pegue o número que você acabou de colocar na resposta (6) e multiplique-o pelo segundo numero (125).</li>
+            <li>2) Subtrair: Coloque esse resultado (625) embaixo do "pedaço" que você usou (640) e faça a subtração.</li>
+            <li>3) Descer: "Desça" o próximo algarismo do primeiro numero (no exemplo nao tem) e coloque-o ao lado do Resto da subtração (15).</li>
+            </ul>
+            <img src="../Imagens/divi3.png" alt="exemplo passo 3: divisão" class="imagem-exemplo">
+
+            <h2>Passo 4: Repetir o Ciclo e Lidar com a Vírgula no Resultado</h2>
+            <p>Agora, você repete o Passo 3 com o novo número (15) até o resto ser 0 e não sobrar mais nenhuma parte do primeiro numero para descer.</p>
+            <h4>O que fazer se não há mais números para descer, mas o Resto NÃO é 0? (15 é menor que 625 e nao tem o que descer)</h4> 
+            <ul class="lista-operacoes">
+            <li>Para continuar, adicione uma vírgula na resposta (fica 6,).</li>
+            <li>Ao mesmo tempo, adicione um zero (0) ao lado do Resto (o 15 vira 150).</li>
+            <li>Continue a divisão: "Quantas vezes 125 cabe em 150? resposta: 1".</li>
+            <li>Coloque esse numero na resposta (6,1) e siga com a divisao adicionando 0 no primeiro numero até nao sobrar mais resto </li>
+            </ul>
+            <h4>O que fazer se o primeiro numero original tinha vírgula? (Ex: 12,4 / 2)</h4>
+            <ul class="lista-operacoes">
+            <li>Você faz a divisão normal (12 / 2 = 6). Resto 0.</li>
+            <li>No momento exato em que você for "descer" o primeiro número que estava depois da vírgula (o 4), você imediatamente coloca uma vírgula no Quociente.</li>
+            <li>Quociente fica 6,.</li>
+            <li>Desça o 4. "Quantas vezes 2 cabe em 4?" Resposta: 2.</li>
+            <li>O resultado final é 6,2.</li>
+            </ul>
+
+            <img src="../Imagens/divi4.png" alt="exemplo passo 4: divisão" class="imagem-exemplo">
+
+            <h2 class="titulo-centro">GERADOR DE PROBLEMA:</h2>
+            <div class="gerador-problema">
+                <p id="num1"></p>
+                <p> ÷ </p>
+                <p id="num2"></p>
+                <p> = </p>
+                <p id="resp"></p>
+                <button id="gerar" class="botao-problema">Gerar problema</button>
+            </div>
+            <br><br>
+            <h2 class="titulo-centro">TUTORIAL DAS FERRAMENTAS MATH EDUCA</h2>
+            <video src="../Videos/tutorial.mp4" controls width="640" class="tutorial-video">
+                Vídeo não carregado.
+            </video>
+        </main>
+
+        <aside class="barra-lateral">
+            <canvas id="lousaDigital"></canvas>
+            <div class="botoes-ferramentas">
+                <img id="lapisSCR" src="../Imagens/Lapis_bottom.png" alt="Ativar Lápis">
+                <img id="borrachaSCR" src="../Imagens/Borracha_bottom.png" alt="Ativar Borracha">
+                <img id="resetSCR" src="../Imagens/Reset_bottom.png" alt="Resetar Tela">
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <a href="../index.html">
+            <img src="../Imagens/Logo.png" alt="logo Math Educa" class="logo-img">
+        </a>
+        <p class="footer-text">© 2025 Math Educa. Todos os direitos reservados.</p>
+    </footer>
+
+	<script src="../JS/scripts.js" defer></script>
+</body>
+</html>
